@@ -1,0 +1,36 @@
+2025/05/08-13:23:03.302 b903 Reusing MANIFEST /Applications/MAMP/htdocs/bot_whatsapp/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/05/08-13:23:03.302 b903 Recovering log #282
+2025/05/08-13:23:03.309 b903 Reusing old log /Applications/MAMP/htdocs/bot_whatsapp/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000282.log 
+2025/05/08-13:23:03.309 b903 Delete type=2 #281
+2025/05/08-13:23:05.448 1eb03 Level-0 table #287: started
+2025/05/08-13:23:05.457 1eb03 Level-0 table #287: 133288 bytes OK
+2025/05/08-13:23:05.464 1eb03 Delete type=0 #282
+2025/05/08-13:23:05.465 1eb03 Manual compaction at level-0 from '\x00T\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00U\x00\x00\x00' @ 0 : 0; will stop at '\x00U\x00\x00\x05' @ 291078 : 1
+2025/05/08-13:23:05.465 1eb03 Compacting 1@0 + 1@1 files
+2025/05/08-13:23:05.500 1eb03 Generated table #288@0: 44827 keys, 874354 bytes
+2025/05/08-13:23:05.500 1eb03 Compacted 1@0 + 1@1 files => 874354 bytes
+2025/05/08-13:23:05.507 1eb03 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/05/08-13:23:05.507 1eb03 Delete type=2 #287
+2025/05/08-13:23:05.508 1eb03 Manual compaction at level-0 from '\x00U\x00\x00\x05' @ 291078 : 1 .. '\x00U\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/05/08-13:23:05.513 1eb03 Level-0 table #290: started
+2025/05/08-13:23:05.516 1eb03 Level-0 table #290: 447 bytes OK
+2025/05/08-13:23:05.523 1eb03 Delete type=0 #286
+2025/05/08-13:23:05.523 1eb03 Delete type=2 #284
+2025/05/08-13:23:05.524 1eb03 Manual compaction at level-0 from '\x00U\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00V\x00\x00\x00' @ 0 : 0; will stop at '\x00U\x00\x00\x05' @ 291111 : 0
+2025/05/08-13:23:05.524 1eb03 Compacting 1@0 + 1@1 files
+2025/05/08-13:23:05.554 1eb03 Generated table #291@0: 44825 keys, 874343 bytes
+2025/05/08-13:23:05.554 1eb03 Compacted 1@0 + 1@1 files => 874343 bytes
+2025/05/08-13:23:05.558 1eb03 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/05/08-13:23:05.558 1eb03 Delete type=2 #290
+2025/05/08-13:23:05.559 1eb03 Manual compaction at level-0 from '\x00U\x00\x00\x05' @ 291111 : 0 .. '\x00V\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/05/08-13:28:08.543 a103 Level-0 table #293: started
+2025/05/08-13:28:08.550 a103 Level-0 table #293: 123118 bytes OK
+2025/05/08-13:28:08.558 a103 Delete type=2 #288
+2025/05/08-13:28:08.558 a103 Delete type=0 #289
+2025/05/08-13:28:08.562 a103 Manual compaction at level-0 from '\x00W\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00X\x00\x00\x00' @ 0 : 0; will stop at '\x00W\x00\x00\x05' @ 296514 : 1
+2025/05/08-13:28:08.562 a103 Compacting 1@0 + 1@1 files
+2025/05/08-13:28:08.613 a103 Generated table #294@0: 46714 keys, 921940 bytes
+2025/05/08-13:28:08.613 a103 Compacted 1@0 + 1@1 files => 921940 bytes
+2025/05/08-13:28:08.619 a103 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/05/08-13:28:08.620 a103 Delete type=2 #293
+2025/05/08-13:28:08.620 a103 Manual compaction at level-0 from '\x00W\x00\x00\x05' @ 296514 : 1 .. '\x00X\x00\x00\x00' @ 0 : 0; will stop at (end)
