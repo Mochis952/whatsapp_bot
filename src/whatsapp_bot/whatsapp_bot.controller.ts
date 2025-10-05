@@ -1,35 +1,43 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Controller, Post, Body } from '@nestjs/common';
 import { WhatsappBotService } from './whatsapp_bot.service';
 
 @Controller('whatsapp')
 export class WhatsappBotController {
   constructor(private readonly whatsappService: WhatsappBotService) {}
 
-  @Get('auth/qr')
-  async getQrCode() {
-    const qrImage = await this.whatsappService.getQrCode();
-    if (!qrImage) {
-      return {
-        message: 'Ya estás autenticado 📱',
-      };
-    }
-    return {
-      qr: qrImage,
-    };
-  }
-  @Post('send')
-  async sendMessage(
-    @Body() body: { number: string; message: string },
-  ): Promise<string> {
-    const { number, message } = body;
-    return this.whatsappService.sendMessage(number, message);
+  @Post('start-session')
+  async startSession() {
+    console.log('Iniciando sesión de WhatsApp...');
+    return await this.whatsappService.startSession();
   }
 
-  @Post('send/grup')
+  @Post('send')
+  async sendMessage(
+    @Body('to') to: string,
+    @Body('message') message: string,
+  ) {
+    await this.whatsappService.sendMessage(to, message);
+  }
+
+  @Post('send-group')
   async sendMessageToGroup(
-    @Body() body: { groupName: string; message: string },
-  ): Promise<string> {
-    const { groupName, message } = body;
-    return this.whatsappService.sendMessageToGroup(groupName, message);
+    @Body('groupId') groupId: string,
+    @Body('message') message: string,
+    @Body('imagePathOrUrl') imagePathOrUrl?: string[],
+  ) {
+  const response = await this.whatsappService.sendMessageToGroup(groupId, message, imagePathOrUrl);
+    return { status: response };
+  }
+
+  @Post('get-groups')
+  async getGroups() {
+    const groups = await this.whatsappService.get_grups();
+    return { groups };
+  }
+
+  @Post('get-chat-history')
+  async getChatHistory(@Body('phoneNumber') phoneNumber: string) {
+    const messages = await this.whatsappService.getChatHistory(phoneNumber);
+    return { messages };
   }
 }
